@@ -38,17 +38,15 @@ class Pila:
         """
         if self.is_Empty():
             raise Empty()
-        
-        
-
+        else:
+            return self.data[-1]
     
-    
+    def clear(self)->None:
+        self.data=[]
+        
 if __name__=='__main__':
     p1=Pila()
     p1.push('keyler')
-    print(len(p1))
-    print(p1.pop())
-    p1.pop()
-        
+    p1.push('andrea')
         
     
