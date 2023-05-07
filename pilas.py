@@ -19,6 +19,11 @@ class Pila:
         return len(self.data)==0
     
     def pop(self):
+        """Remove and return the top element from the stack
+
+        :raises Empty: if the stack is empty , return a Excepcion
+        :return: return the top element from the stack
+        """
         if self.is_Empty():
             raise Empty()
         else:
@@ -42,11 +47,25 @@ class Pila:
             return self.data[-1]
     
     def clear(self)->None:
+        """Remove all the elements of the stack
+        """
         self.data=[]
         
-if __name__=='__main__':
-    p1=Pila()
-    p1.push('keyler')
-    p1.push('andrea')
+    def __str__(self) -> str:
+        return(str(self.data))
+        
+# if __name__=='__main__':
+#     p1=Pila()
+#     p1.push('keyler')
+#     p1.push('andrea')
+#     p1.push(20)
+#     print(p1.is_Empty())
+#     print(len(p1))
+#     print(p1.top())
+#     print(p1.pop())
+#     print(p1.top())
+#     print(p1)
+#     print(p1.pop())
+#     print(p1,p1.clear(),p1)
         
     
